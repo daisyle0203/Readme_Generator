@@ -1,7 +1,6 @@
 // Include packages needed for this application
 const inquirer = require("inquirer")
 const fs = require("fs")
-const index = require("../index.js")
 
 // Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
@@ -51,14 +50,16 @@ function renderLicenseSection(license) {
 }
 
 // Function to generate markdown for README
-function generateMarkdown(answer) {
+function generateMarkdown(answers) {
   return `
-  # ${answer.title}
+  # ${answers.title}
 
-  ## ${renderLicenseSection(answer.license)} ${renderLicenseBadge(
-    answer.license
+  ## ${renderLicenseSection(answers.license)} ${renderLicenseBadge(
+    answers.license
   )}
-  ### ${renderLicenseLink(answer.license)}
+
+  ### ${renderLicenseLink(answers.license)}
+
   ## Table of Contents:
   ###  * [Installation](#installation)
   ###  * [Usage](#usage)
@@ -66,23 +67,28 @@ function generateMarkdown(answer) {
   ###  * [Contributors](#contributors)
   ###  * [Tests](#tests)
   ###  * [Questions](#questions)
+
   ## Installation:
   ### You must install the following for this app to function:
-  ### ${answer.installation}
+  ### ${answers.installation}
+
   ## Usage:
-  ### ${answer.usage}
+  ### ${answers.usage}
+
   ## Contributors:
-  ### ${answer.contributions}
+  ### ${answers.contributions}
+
   ## Tests:
   ### Run the following commands in your terminal to test this app:
-  ### ${answer.tests}
+  ### ${answers.tests}
+
   ## Questions:
   ### If you have any questions, you may contact me at either
-  ### Github: https://github.com/${answer.username}
+  ### Github: https://github.com/${answers.username}
   ### or
-  ### Email: ${answer.email}
+  ### Email: ${answers.email}
 `
 }
 
 // Exports
-module.exports = generateMarkdown
+module.exports = { generateMarkdown }
