@@ -1,11 +1,12 @@
 // Include packages needed for this application
 const inquirer = require("inquirer")
 const { writeFile } = require("fs").promises
-const { generateMarkdown } = require("./utils")
+const { generateMarkdown } = require("./utils/generateMarkdown.js")
 
+// Create runCode function and then run it
 const runCode = async () => {
   try {
-    const answer = await inquirer.prompt([
+    const answers = await inquirer.prompt([
       {
         type: "input",
         message: "What is the title of the project?",
@@ -27,7 +28,7 @@ const runCode = async () => {
         name: "usage",
       },
       {
-        type: "input",
+        type: "list",
         message: "What license is being used?",
         name: "license",
         choices: ["None", "Apache 2.0", "MIT", "GPL v3.0"],
@@ -53,7 +54,7 @@ const runCode = async () => {
         name: "email",
       },
     ])
-    await writeFile("README.md", generateMarkdown(answer))
+    await writeFile("README.md", generateMarkdown(answers))
     console.log("Successfully created README.md!")
   } catch (e) {
     console.log(e)
