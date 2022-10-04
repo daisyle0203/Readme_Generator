@@ -1,5 +1,5 @@
 
-  # d
+  # Readme Generator
 
   ## License: MIT  ![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
 
@@ -15,20 +15,20 @@
 
   ## Installation:
   ### You must install the following for this app to function:
-  ### d
+  ### Node.js
 
   ## Usage:
-  ### d
+  ### Users can quickly and easily generate a README.md file by using a command-line application to generate one. This allows users to devote more time working on the project.
 
   ## Contributors:
-  ### d
+  ### 
 
   ## Tests:
   ### Run the following commands in your terminal to test this app:
-  ### d
+  ### node index
 
   ## Questions:
   ### If you have any questions, you may contact me at either
-  ### Github: https://github.com/d
+  ### Github: https://github.com/daisy.le0203
   ### or
-  ### Email: d
+  ### Email: daisy.le0203@gmail.com
