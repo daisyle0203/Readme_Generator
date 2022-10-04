@@ -1,7 +1,3 @@
-// Include packages needed for this application
-const inquirer = require("inquirer")
-const fs = require("fs")
-
 // Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
