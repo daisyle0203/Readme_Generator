@@ -50,39 +50,41 @@ function generateMarkdown(answers) {
   return `
   # ${answers.title}
 
-  ## ${renderLicenseSection(answers.license)} ${renderLicenseBadge(
-    answers.license
-  )}
-
-  ### ${renderLicenseLink(answers.license)}
-
   ## Table of Contents:
-  ###  * [Installation](#installation)
-  ###  * [Usage](#usage)
-  ###  * [License](#license)
-  ###  * [Contributors](#contributors)
-  ###  * [Tests](#tests)
-  ###  * [Questions](#questions)
+   * [Description](#description)
+   * [Installation](#installation)
+   * [Usage](#usage)
+   * [License](#license)
+   * [Contributors](#contributors)
+   * [Tests](#tests)
+   * [Questions](#questions)
+  
+    
+  ## Description:
+  ${answers.description}
 
   ## Installation:
-  ### You must install the following for this app to function:
-  ### ${answers.installation}
+  You must install the following for this app to function:
+  ${answers.installation}
 
-  ## Usage:
-  ### ${answers.usage}
+  ## Usage:${answers.usage}
 
-  ## Contributors:
-  ### ${answers.contributions}
+  ## License: 
+
+  ${renderLicenseBadge(answers.license)}
+
+  ${renderLicenseLink(answers.license)}
+
+  ## Contributors:${answers.contributions}
 
   ## Tests:
-  ### Run the following commands in your terminal to test this app:
-  ### ${answers.tests}
+  Run the following commands in your terminal to test this app:${answers.tests}
 
   ## Questions:
-  ### If you have any questions, you may contact me at either
-  ### Github: https://github.com/${answers.username}
-  ### or
-  ### Email: ${answers.email}
+  If you have any questions, you may contact me at either
+  Github: https://github.com/${answers.username}
+  or
+  Email: ${answers.email}
 `
 }
 
