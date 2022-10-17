@@ -64,7 +64,7 @@ node index
 ## Questions:
 
 If you have any questions, you may contact me at either <br>
-Github: https://github.com/daisy.le0203
+Github: https://github.com/daisyle0203
 <br>
 or
 <br>
